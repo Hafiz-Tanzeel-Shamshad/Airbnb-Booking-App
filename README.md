@@ -2,7 +2,7 @@
 
 
  ## 🏡 Overview
-This is a full-stack rental booking web app inspired by Airbnb, developed using MERN stack with EJS as the templating engine for server-side rendering. The application provides a dynamic and responsive user interface with CRUD functionality, interactive Mapbox maps, and user comments with ratings.
+This is a **full-stack rental booking web app** inspired by **Airbnb**, developed using **MERN stack** with **EJS** as the templating engine for server-side rendering. The application provides a **dynamic and responsive user interface** with **CRUD functionality**, **interactive Mapbox maps**, and **user comments with ratings**.
 
 ---
 
