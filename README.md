@@ -2,7 +2,7 @@
 
 
  ## 🏡 Overview
-This project is a **full-stack rental booking web application** inspired by **Airbnb**, built using the **MERN** stack (**MongoDB, Express.js, React.js, Node.js**) with **EJS** as the templating engine for server-side rendering. It provides a seamless experience for **browsing, listing, and managing rental properties** with robust **authentication, CRUD operations, and a responsive design**.
+This project is a **full-stack rental booking web application** inspired by **Airbnb**, built using the **MERN** stack (**MongoDB, Express.js, React.js, Node.js**) with **EJS** as the templating engine for server-side rendering. It provides a seamless experience for **browsing, listing, and managing rental properties** with robust **authentication, CRUD operations, a responsive design, interactive Mapbox maps, and user comments with ratings**. It is fully **deployment ready on Railway** — both frontend and backend deployed together.
 
 ---
 
@@ -16,7 +16,9 @@ This project is a **full-stack rental booking web application** inspired by **Ai
  ✅ **Bootstrap UI:** Clean, responsive, and mobile-friendly design.  
  ✅ **Session Management:** Secure user sessions with cookies.  
  ✅ **Error Handling:** Centralized error handling for better debugging.  
- ✅ **Deployment Ready:** Easily deployable on **Heroku or Vercel**  
+ ✅ **Interactive Maps:** Mapbox (third-party map service) integration to show listing locations.  
+ ✅ **Comments & Ratings:** Users can comment on listings and give ratings.  
+ ✅ **Deployment Ready:** Easily deployable on **Railway** — frontend and backend together.
 
 ---
 
@@ -26,6 +28,7 @@ This project is a **full-stack rental booking web application** inspired by **Ai
 - ![EJS](https://img.shields.io/badge/EJS-Embedded%20JavaScript-blue)
 - ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-purple)
 - ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+- ![Mapbox](https://img.shields.io/badge/Mapbox-Interactive%20Maps-black)
 
 ### Backend
 - ![Node.js](https://img.shields.io/badge/Node.js-Server-6DA55F)
@@ -66,14 +69,24 @@ Follow these steps to run the project locally:
 
 ## 🚀 Deployment
 
-### 1. Build the project:
+This project is **deployment ready for Railway**. Both the **frontend** and **backend** are deployed together as a single Node.js application.
+
+### 1. Push your code to GitHub:
    ```bash
-   npm run build
+   git push origin main
    ```
 
-### 2. Deploy to Heroku/Vercel:
-- Push your changes to GitHub.
-- Use Heroku CLI or Vercel CLI to deploy your project.
+### 2. Create a new project on Railway:
+- Go to [Railway.app](https://railway.app) and click **New Project** → **Deploy from GitHub repo**.
+- Select your repository; Railway will auto-detect the Node.js build.
+
+### 3. Configure environment variables:
+- Add your `MONGODB_URL`, `SESSION_SECRET`, `MAP_TOKEN`, and `CLOUDINARY` keys in the Railway dashboard.
+
+### 4. Deploy:
+- Railway automatically builds and deploys both frontend and backend.
+- Set the start command to `node app.js` in the service settings if it is not auto-detected.
+- Your app will be live at the Railway-provided URL.
 
 ---
 
