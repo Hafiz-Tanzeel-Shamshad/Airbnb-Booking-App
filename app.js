@@ -30,23 +30,40 @@ const User = require("./models/user.js");
 
 
 
-// let MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
-let MONGO_URL = process.env.ATLASDB_URI;
-async function main(){
-    mongoose.connect(MONGO_URL, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        ssl: true,
-        tlsInsecure: false,  // Ensure secure TLS connection
-        serverSelectionTimeoutMS: 5000
-      });
+let MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+// let MONGO_URL = process.env.ATLASDB_URI;
+
+
+
+async function main() {
+  try {
+    await mongoose.connect(MONGO_URL, {
+      serverSelectionTimeoutMS: 5000, // optional, limits waiting time
+    });
+    console.log("✅ Connected to MongoDB Atlas");
+  } catch (err) {
+    console.error("❌ MongoDB connection error:", err);
+    process.exit(1); // exit if connection fails
+  }
 }
 
-main().then((res)=>{
-    console.log("Connecting to Data Base");
-}).catch((err)=>{
-    console.log(err);
-});
+main();
+
+// async function main(){
+//     mongoose.connect(MONGO_URL, {
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true,
+//         ssl: true,
+//         tlsInsecure: false,  // Ensure secure TLS connection
+//         serverSelectionTimeoutMS: 5000
+//       });
+// }
+
+// main().then((res)=>{
+//     console.log("Connecting to Data Base");
+// }).catch((err)=>{
+//     console.log(err);
+// });
 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
