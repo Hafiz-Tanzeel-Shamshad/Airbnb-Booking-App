@@ -2,7 +2,7 @@
 
 
  ## 🏡 Overview
-This project is a **full-stack rental booking web application** inspired by **Airbnb**, built using the **MERN** stack (**MongoDB, Express.js, React.js, Node.js**) with **EJS** as the templating engine for server-side rendering. It provides a seamless experience for **browsing, listing, and managing rental properties** with robust **authentication, CRUD operations, a responsive design, interactive Mapbox maps, and user comments with ratings**. It is fully **deployment ready on Railway** — both frontend and backend deployed together.
+This is a full-stack rental booking web app inspired by Airbnb, developed using MERN stack with EJS as the templating engine for server-side rendering. The application provides a dynamic and responsive user interface with CRUD functionality, interactive Mapbox maps, and user comments with ratings.
 
 ---
 
